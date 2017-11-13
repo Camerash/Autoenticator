@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4caf50</color>
-    <color name="colorPrimaryDark">#087f23</color>
-    <color name="colorAccent">#4db6ac</color>
+    <color name="colorPrimary">#0277bd</color>
+    <color name="colorPrimaryDark">#004c8c</color>
+    <color name="colorAccent">#81d4fa</color>
 
-    //Color Swatches provided by http://designmodo.github.io/Flat-UI/
+    <!-- Color Swatches provided by http://designmodo.github.io/Flat-UI -->
     <color name="turquoise">#1abc9c</color>
     <color name="green_sea">#16a085</color>
     <color name="emerald">#2ecc71</color>

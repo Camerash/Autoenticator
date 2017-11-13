@@ -1,4 +1,4 @@
-package com.camerash.autoentication
+package com.camerash.autoenticator
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -1,12 +1,16 @@
-package com.camerash.autoentication
+package com.camerash.autoenticator
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.support.constraint.ConstraintSet
 import android.support.graphics.drawable.AnimatedVectorDrawableCompat
 import android.support.v4.content.ContextCompat
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.app.AppCompatDelegate
 import android.view.Menu
+import com.transitionseverywhere.TransitionManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +31,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        checkNotiPermission()
     }
 
     fun initUtils() {
@@ -52,6 +61,38 @@ class MainActivity : AppCompatActivity() {
         val avd = AnimatedVectorDrawableCompat.create(this, if(enabled) R.drawable.unlock_avd else R.drawable.lock_avd)
         imageView.setImageDrawable(avd)
         avd?.start()
+
+        TransitionManager.beginDelayedTransition(constraintLayout)
+
+        val constraintSet = ConstraintSet()
+        constraintSet.clone(constraintLayout)
+        if(enabled) {
+            constraintSet.addToVerticalChain(urlTextView.id, infoTextView.id, -1)
+            constraintSet.centerVertically(infoTextView.id, imageView.id, ConstraintSet.BOTTOM, 0, button.id, ConstraintSet.TOP, 0, 0.5f)
+        } else {
+            constraintSet.centerVertically(infoTextView.id, button.id, ConstraintSet.TOP, 0, button.id, ConstraintSet.BOTTOM, 0, 0.5f)
+        }
+
+        constraintSet.applyTo(constraintLayout)
+    }
+
+    fun checkNotiPermission() {
+        if(!Utils.checkNotificationListenerServicePermission(this)) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle(getString(R.string.alert_title))
+            builder.setMessage(getString(R.string.alert_message))
+            builder.setPositiveButton("OK", { _, _ ->
+                val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
+                startActivity(intent)
+            })
+            builder.setNegativeButton("Cancel", { _, _ ->
+                finish()
+            })
+            builder.setCancelable(false)
+
+            val dialog = builder.create()
+            dialog.show()
+        }
     }
 
 }

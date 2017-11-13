@@ -8,8 +8,8 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "com.camerash.autoentication"
-        minSdkVersion 16
+        applicationId "com.camerash.autoenticator"
+        minSdkVersion 18
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -28,5 +28,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    // Flat UI button
     compile 'info.hoang8f:fbutton:1.0.5'
+
+    // Transition backport
+    compile "com.andkulikov:transitionseverywhere:1.7.7"
 }

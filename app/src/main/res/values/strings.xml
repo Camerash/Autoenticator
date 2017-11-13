@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Autoentication</string>
+    <string name="app_name">Autoenticator</string>
 
     <!-- Main Activity -->
     <string name="info">
@@ -10,7 +10,18 @@
     <string name="disable">Disable</string>
     <string name="loading">Doing work…</string>
 
+    <string name="try_step_1">Go to any website that</string>
+    <string name="try_step_2">requires 2FA and see the magic!</string>
+
     <!-- Menu title -->
     <string name="about">About</string>
     <string name="settings">Settings</string>
+
+    <!-- Alert dialog -->
+    <string name="alert_title">Permission required</string>
+    <string name="alert_message">Autoentication needs to access your device\'s notification in order to work</string>
+    <string name="okay">OK</string>
+
+    <!-- Notification listener service -->
+    <string name="noti_service_name">Autoentication</string>
 </resources>

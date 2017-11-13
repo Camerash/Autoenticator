@@ -1,8 +1,11 @@
-package com.camerash.autoentication
+package com.camerash.autoenticator
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import android.support.v4.app.NotificationManagerCompat
+
+
 
 /**
  * Created by camerash on 11/8/17.
@@ -29,6 +32,10 @@ class Utils {
             if(prefs !is SharedPreferences) return -1
 
             return prefs!!.getInt(key, -1)
+        }
+
+        fun checkNotificationListenerServicePermission(context: Context): Boolean{
+            return NotificationManagerCompat.getEnabledListenerPackages(context).any { it == context.packageName }
         }
     }
 }

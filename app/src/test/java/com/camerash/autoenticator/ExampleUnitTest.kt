@@ -1,4 +1,4 @@
-package com.camerash.autoentication
+package com.camerash.autoenticator
 
 import org.junit.Test
 
