@@ -32,6 +32,63 @@
             android:textSize="16sp"
             android:text="@string/what_is_autoenticator"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/autoenticator_info"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/title_black"
+            android:textSize="16sp"
+            android:text="@string/how_does_it_work"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_info"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/title_black"
+            android:textSize="16sp"
+            android:text="@string/security"/>
+
+        <TextView
+            android:id="@+id/security_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/security_info"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/license"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="24dp"
+            android:textColor="@android:color/white"
+            android:text="@string/license"
+            app:backgroundTint="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="@string/next"
+            android:visibility="gone"/>
+
     </LinearLayout>
 
 </ScrollView>

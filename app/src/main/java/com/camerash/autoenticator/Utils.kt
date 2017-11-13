@@ -16,6 +16,7 @@ class Utils {
         val ENABLE_TOAST_KEY = "ENABLE_TOAST"
         val DUO_SECURITY_PACK_NAME = "com.duosecurity.duomobile"
         val SERVICE_ENABLED_KEY = "SERVICE_ENABLED"
+        val FIRST_START_KEY = "FIRST_START"
 
         val CONFIRM_ACTION_INDEX = 0
 

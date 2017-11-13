@@ -29,6 +29,20 @@
 
     <!-- About -->
     <string name="what_is_autoenticator">What is Autoenticator?</string>
+    <string name="autoenticator_info">Autoenticator is an app that helps you accept 2FA request on your phone automatically.\nIt works even if the screen is off.</string>
+
+    <string name="how_does_it_work">How does it work?</string>
+    <string name="work_info">It works by helping you to press the confirm button when the 2FA request notification pops up. Therefore it will need the access of your notifications.</string>
+
+    <string name="security">Security and privacy</string>
+    <string name="security_info">This app will only access notifications of the mobile app "Duo Security",
+        and it will only perform the confirm action without accessing its data.
+        \nThis project is completely open-sourced and its source code is available\t<a href="https://github.com/Camerash/Autoenticator">on Github</a>
+    </string>
+
+    <string name="license">LICENSE</string>
+
+    <string name="next">NEXT</string>
 
     <!-- Notification listener service -->
     <string name="noti_service_name">Auth Notification Listener Service</string>
