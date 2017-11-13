@@ -27,6 +27,9 @@
     <string name="toast_info">Shown when accepting 2FA (click for demo)</string>
     <string name="manage_system_noti_permission">Manage application notification access</string>
 
+    <!-- About -->
+    <string name="what_is_autoenticator">What is Autoenticator?</string>
+
     <!-- Notification listener service -->
     <string name="noti_service_name">Auth Notification Listener Service</string>
     <string name="autoenticating">Autoenticating…</string>

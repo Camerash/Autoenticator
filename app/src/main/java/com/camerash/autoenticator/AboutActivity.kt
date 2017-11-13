@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 
 /**
  * Created by camerash on 11/13/17.
+ * About activity
  */
 class AboutActivity : AppCompatActivity() {
 
