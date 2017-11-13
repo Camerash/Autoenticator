@@ -115,6 +115,10 @@ class MainActivity : AppCompatActivity() {
             val dialog = builder.create()
             dialog.show()
             showingDialog = true
+
+            enabled = false
+            Utils.putInt(Utils.SERVICE_ENABLED_KEY, 0)
+            redrawUI()
         }
     }
 
