@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Autoentication</string>
+
+    <!-- Main Activity -->
+    <string name="info">
+        This application is for research and educational purpose only.\n\n
+        It is strongly recommended to confirm the 2FA request manually by yourself.
+    </string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="loading">Doing work…</string>
+
+    <!-- Menu title -->
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+</resources>
