@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#0277bd</color>
     <color name="colorPrimaryDark">#004c8c</color>
-    <color name="colorAccent">#81d4fa</color>
+    <color name="colorAccent">#3eadeb</color>
 
     <!-- Color Swatches provided by http://designmodo.github.io/Flat-UI -->
     <color name="turquoise">#1abc9c</color>
