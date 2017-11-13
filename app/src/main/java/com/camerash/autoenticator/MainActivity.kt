@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     var enabled = false
+    var showingDialog = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +50,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        checkNotiPermission()
+        if(!showingDialog) {
+            checkNotiPermission()
+        }
     }
 
     fun initUtils() {
@@ -100,15 +103,18 @@ class MainActivity : AppCompatActivity() {
             builder.setTitle(getString(R.string.alert_title))
             builder.setMessage(getString(R.string.alert_message))
             builder.setPositiveButton("OK", { _, _ ->
+                showingDialog = false
                 startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
             })
             builder.setNegativeButton("Cancel", { _, _ ->
+                showingDialog = false
                 finish()
             })
             builder.setCancelable(false)
 
             val dialog = builder.create()
             dialog.show()
+            showingDialog = true
         }
     }
 
