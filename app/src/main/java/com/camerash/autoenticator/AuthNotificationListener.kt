@@ -9,8 +9,6 @@ import android.service.notification.StatusBarNotification
 import android.support.v4.app.NotificationCompat
 import android.widget.Toast
 
-
-
 /**
  * Created by camerash on 11/13/17.
  * Listener to intercept 2FA authenticate notifications
@@ -18,9 +16,6 @@ import android.widget.Toast
 
 class AuthNotificationListener : NotificationListenerService() {
 
-    val DUO_SECURITY_PACK_NAME = "com.duosecurity.duomobile"
-    val SERVICE_ENABLED_KEY = "SERVICE_ENABLED"
-    val CONFIRM_ACTION_INDEX = 0
     var authencating = false
 
     override fun onBind(intent: Intent): IBinder? {
@@ -34,10 +29,10 @@ class AuthNotificationListener : NotificationListenerService() {
 
         // check if user enabled service
         // we need to do this since we cannot directly start / stop a service that extends NotificationListenerService
-        if(Utils.getInt(SERVICE_ENABLED_KEY) <= 0) return
+        if(Utils.getInt(Utils.SERVICE_ENABLED_KEY) <= 0) return
 
 
-        if(sbn.packageName == DUO_SECURITY_PACK_NAME) {
+        if(sbn.packageName == Utils.DUO_SECURITY_PACK_NAME) {
             // get notification
             val notification = sbn.notification
 
@@ -45,12 +40,12 @@ class AuthNotificationListener : NotificationListenerService() {
             if(NotificationCompat.getActionCount(notification) <= 0) return
 
             // approve 2FA!
-            NotificationCompat.getAction(notification, CONFIRM_ACTION_INDEX).actionIntent.send()
+            NotificationCompat.getAction(notification, Utils.CONFIRM_ACTION_INDEX).actionIntent.send()
 
             val handler = Handler(Looper.getMainLooper())
             val postHandler = Handler()
             handler.post({
-                if(authencating) {
+                if(authencating && Utils.getInt(Utils.ENABLE_TOAST_KEY) > 0) {
                     Toast.makeText(this@AuthNotificationListener.applicationContext, getString(R.string.autoenticating), Toast.LENGTH_SHORT).show()
                 }
                 authencating = true

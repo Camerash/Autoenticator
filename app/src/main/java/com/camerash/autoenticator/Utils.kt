@@ -5,8 +5,6 @@ import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.support.v4.app.NotificationManagerCompat
 
-
-
 /**
  * Created by camerash on 11/8/17.
  * Utils class for SharedPreference, used to store settings and status
@@ -14,6 +12,13 @@ import android.support.v4.app.NotificationManagerCompat
 
 class Utils {
     companion object {
+
+        val ENABLE_TOAST_KEY = "ENABLE_TOAST"
+        val DUO_SECURITY_PACK_NAME = "com.duosecurity.duomobile"
+        val SERVICE_ENABLED_KEY = "SERVICE_ENABLED"
+
+        val CONFIRM_ACTION_INDEX = 0
+
         var prefs: SharedPreferences? = null
 
         fun initSharedPreference(c: Context) {

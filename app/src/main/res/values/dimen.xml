@@ -2,4 +2,5 @@
 <resources>
     <dimen name="shadow_height">6dp</dimen>
     <dimen name="image_view_height">200dp</dimen>
+    <dimen name="setting_text_size">14sp</dimen>
 </resources>

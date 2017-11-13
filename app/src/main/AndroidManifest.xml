@@ -24,6 +24,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
         <service android:name=".AuthNotificationListener"
             android:label="@string/noti_service_name"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">

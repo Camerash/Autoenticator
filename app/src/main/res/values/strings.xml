@@ -22,6 +22,11 @@
     <string name="alert_message">Autoentication needs to access your device\'s notification in order to work</string>
     <string name="okay">OK</string>
 
+    <!-- Settings -->
+    <string name="enable_toast">Enable toast message</string>
+    <string name="toast_info">Shown when accepting 2FA (click for demo)</string>
+    <string name="manage_system_noti_permission">Manage application notification access</string>
+
     <!-- Notification listener service -->
     <string name="noti_service_name">Auth Notification Listener Service</string>
     <string name="autoenticating">Autoenticating…</string>

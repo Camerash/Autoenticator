@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/about"
-        android:icon="@drawable/ic_action_help"
+        android:icon="@drawable/ic_action_info"
         android:menuCategory="alternative"
         android:title="@string/about"
         app:showAsAction="always" />
