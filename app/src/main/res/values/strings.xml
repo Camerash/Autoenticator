@@ -23,5 +23,6 @@
     <string name="okay">OK</string>
 
     <!-- Notification listener service -->
-    <string name="noti_service_name">Autoentication</string>
+    <string name="noti_service_name">Auth Notification Listener Service</string>
+    <string name="autoenticating">Autoenticating…</string>
 </resources>
