@@ -13,6 +13,8 @@
     <string name="try_step_1">Go to any website that</string>
     <string name="try_step_2">requires 2FA and see the magic!</string>
 
+    <string name="screen_off_text">(It works even when the screen is off!)</string>
+
     <!-- Menu title -->
     <string name="about">About</string>
     <string name="settings">Settings</string>

@@ -33,8 +33,7 @@ class SettingsActivity : AppCompatActivity() {
 
     fun initButtons() {
         manage_system_noti_permission.setOnClickListener {
-            val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
-            startActivity(intent)
+            startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
         }
     }
 }

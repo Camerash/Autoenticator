@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         initUtils()
         initButton()
+        checkFirstStartUp()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -99,8 +100,7 @@ class MainActivity : AppCompatActivity() {
             builder.setTitle(getString(R.string.alert_title))
             builder.setMessage(getString(R.string.alert_message))
             builder.setPositiveButton("OK", { _, _ ->
-                val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
-                startActivity(intent)
+                startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
             })
             builder.setNegativeButton("Cancel", { _, _ ->
                 finish()
@@ -109,6 +109,13 @@ class MainActivity : AppCompatActivity() {
 
             val dialog = builder.create()
             dialog.show()
+        }
+    }
+
+    fun checkFirstStartUp() {
+        if(Utils.getInt(Utils.FIRST_START_KEY) == -1) {
+            Utils.putInt(Utils.ENABLE_TOAST_KEY, 1)
+            startActivity(Intent(this, AboutActivity::class.java))
         }
     }
 
