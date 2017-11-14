@@ -1,5 +1,6 @@
 package com.camerash.autoenticator
 
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -8,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.webkit.WebView
 import kotlinx.android.synthetic.main.activity_about.*
+
+
 
 
 /**
@@ -30,6 +33,18 @@ class AboutActivity : AppCompatActivity() {
 
     fun initViews() {
         security_info.movementMethod = LinkMovementMethod.getInstance()
+        try {
+            val pInfo = this.packageManager.getPackageInfo(packageName, 0)
+            val version = pInfo.versionName
+            val builder = StringBuilder()
+            builder.append(getString(R.string.version))
+            builder.append(" ")
+            builder.append(version)
+            version_text.text = builder.toString()
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+        }
+
         if(firstStart) {
             next.visibility = View.VISIBLE
             next.setOnClickListener {

@@ -46,6 +46,8 @@
 
     <string name="next">NEXT</string>
 
+    <string name="version">Version</string>
+
     <!-- Notification listener service -->
     <string name="noti_service_name">Auth Notification Listener Service</string>
     <string name="autoenticating">Autoenticating…</string>
